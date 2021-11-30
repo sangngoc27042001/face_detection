@@ -42,8 +42,7 @@ import os
 
 yolo = YOLO()
 
-whenet = WHENet(snapshot='WHENet.h5')
-
+whenet = WHENet(snapshot=os.path.join( os.path.dirname(__file__), 'WHENet.h5'))
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 os.environ['CUDA_VISIBLE_DEVICES']='0'
 
